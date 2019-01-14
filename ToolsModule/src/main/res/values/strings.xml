@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ToolModules</string>
+
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="list_item_name_hint">Item</string>
+    <string name="list_item_info_hint">Item information</string>
+    <string name="activity_applist">Application List</string>
+
+    <string name="exit_notice">Press Back Button again to Exit </string>
+</resources>

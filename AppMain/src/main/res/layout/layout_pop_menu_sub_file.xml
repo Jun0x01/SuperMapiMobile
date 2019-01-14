@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/menu_sub_btn_container"
+            android:layout_width="@dimen/pop_menu_sub_file_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_frame_gray"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/pop_padding_bot"
+            android:paddingTop="@dimen/pop_padding_top"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp">
+
+                <TextView
+                    android:id="@+id/btn_menu_sub_file_New"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_state_white_blue"
+                    android:onClick="onClick"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/pop_padding_left"
+                    android:paddingRight="@dimen/pop_padding_right"
+                    android:text="@string/pop_file_new" />
+
+                <TextView
+                    android:id="@+id/btn_menu_sub_file_Open"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_state_white_blue"
+                    android:onClick="onClick"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/pop_padding_left"
+                    android:paddingRight="@dimen/pop_padding_right"
+                    android:text="@string/pop_file_open" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/gray_C0"
+                android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/btn_menu_sub_file_Import"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_state_white_blue"
+                    android:onClick="onClick"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/pop_padding_left"
+                    android:paddingRight="@dimen/pop_padding_right"
+                    android:text="@string/pop_file_import"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/btn_menu_sub_file_Export"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_state_white_blue"
+                    android:onClick="onClick"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/pop_padding_left"
+                    android:paddingRight="@dimen/pop_padding_right"
+                    android:text="@string/pop_file_export"
+                    android:visibility="gone" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/gray_C0" />
+
+
+                <TextView
+                    android:id="@+id/btn_menu_sub_file_SaveMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_state_white_blue"
+                    android:onClick="onClick"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/pop_padding_left"
+                    android:paddingRight="@dimen/pop_padding_right"
+                    android:text="@string/pop_file_save_map" />
+
+
+                <TextView
+                    android:id="@+id/btn_menu_sub_file_SaveAsMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_state_white_blue"
+                    android:onClick="onClick"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/pop_padding_left"
+                    android:paddingRight="@dimen/pop_padding_right"
+                    android:text="@string/pop_file_save_as_map" />
+
+                <TextView
+                    android:id="@+id/btn_menu_sub_file_CloseMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_state_white_blue"
+                    android:onClick="onClick"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/pop_padding_left"
+                    android:paddingRight="@dimen/pop_padding_right"
+                    android:text="@string/pop_file_close_map" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/gray_C0" />
+
+                <TextView
+                    android:id="@+id/btn_menu_sub_file_SaveWorkspace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_state_white_blue"
+                    android:onClick="onClick"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/pop_padding_left"
+                    android:paddingRight="@dimen/pop_padding_right"
+                    android:text="@string/pop_file_save_workspace" />
+
+
+                <TextView
+                    android:id="@+id/btn_menu_sub_file_SaveAsWorkspace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_state_white_blue"
+                    android:onClick="onClick"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/pop_padding_left"
+                    android:paddingRight="@dimen/pop_padding_right"
+                    android:text="@string/pop_file_save_as_workspace" />
+
+
+                <TextView
+                    android:id="@+id/btn_menu_sub_file_CloseWorkspace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_state_white_blue"
+                    android:onClick="onClick"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:paddingLeft="@dimen/pop_padding_left"
+                    android:paddingRight="@dimen/pop_padding_right"
+                    android:text="@string/pop_file_close_workspace" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/layout_floatingwindow"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+        <TextView
+            android:id="@+id/floating_text"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="3dp"
+            android:gravity="center"
+            android:hint="255.99MB\n100.00%"
+            android:textSize="8sp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/bg_state_green_orange_red_rounded_corner"
+            />
+
+</FrameLayout>

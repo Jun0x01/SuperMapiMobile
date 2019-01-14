@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tag_navi">导航</string>
+    <string name="long_touch_map">长按地图</string>
+
+    <string name="workspace_was_opened">工作空间已打开</string>
+    <string name="creating_workspace">创建工作空间....</string>
+    <string name="create_workspace_success">成功创建工作空间</string>
+    <string name="create_workspace_fail">创建工作空间失败</string>
+
+    <string name="open_workspace">正在打开工作空间....</string>
+    <string name="open_workspace_success">成功打开工作空间</string>
+    <string name="open_workspace_fail">打开工作空间失败</string>
+
+
+    <string name="creating_datasource">创建数据源....</string>
+    <string name="create_datasource_success">成功创建数据源</string>
+    <string name="create_datasource_fail">创建数据源失败</string>
+
+    <string name="datasource_was_opened">文件已经打开</string>
+    <string name="datasource_was_opened_web">网络数据已经打开</string>
+    <string name="open_datasource">正在打开数据源....</string>
+    <string name="open_datasource_success">成功打开数据源</string>
+    <string name="open_datasource_fail">打开数据源失败</string>
+
+    <string name="saved_map">保存地图: </string>
+    <string name="save_map_failed">保存地图失败.</string>
+    <string name="save_map_exception">保存地图时发生异常</string>
+    <string name="input_name">请输入一个名词</string>
+    <string name="map_existed">地图重名</string>
+    <string name="saved_new_map">保存新地图: </string>
+    <string name="save_map_not_necessary">没有图层，不用保存</string>
+    <string name="saved_as_map">地图另存为: </string>
+    <string name="closed_map">关闭地图: </string>
+
+    <string name="saved_workspace">保存工作空间: </string>
+    <string name="save_workspace_failed">保存工作空间失败</string>
+    <string name="save_workspace_exception">保存工作空间时发生异常</string>
+
+    <string name="empty_path">路径为空</string>
+    <string name="path_not_change">保存的路径没有改变</string>
+    <string name="path_existed">目标文件已经存在</string>
+    <string name="close_workspace">关闭工作空间: </string>
+
+    <string name="loading_navigation">正在加载导航数据....</string>
+    <string name="update_navi_data_needed">请先更新导航数据, \'Navigation > Navigation Data Settings\'</string>
+    <string name="no_path_start_position">起点周围没有道路</string>
+    <string name="no_path_destnation">终点周围没有道路</string>
+    <string name="route_analyst_failed">路径分析失败</string>
+    <string name="choose_a_navigation">请通过 \'Navigation\' 按钮选择一个导航.</string>
+
+    <string name="navigation_data_setting">初始化导航数据....</string>
+    <string name="location_outside_map">当前位置不在地图范围内.</string>
+
+    <!-- License Configuration -->
+    <string name="license_valid">许可有效</string>
+    <string name="license_invalid">许可无效</string>
+    <string name="license_deviceidtype_changed">DeviceIDType 已经被修改，强制停止后重启生效</string>
+    <string name="license_path_not_changed">许可路径没有更改</string>
+    <string name="license_activating">正在激活 ...</string>
+
+    <string name="license_sign_in">正在登录 ...</string>
+    <string name="license_sign_invalid">登录成功，但许可无效</string>
+    <string name="license_sign_username_less">用户名不能少于4个字符</string>
+    <string name="license_sign_password_less">密码不能少于6个字符</string>
+
+
+</resources>

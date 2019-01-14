@@ -1,0 +1,26 @@
+<resources>
+    <string name="activation">激活</string>
+
+    <!-- Setting -->
+    <string name="setting">设置</string>
+    <string name="license_path">许可文件保存路径</string>
+    <string name="device_id_type">设备ID类型</string>
+    <string name="device_id_type_note">参数已修改，重启应用后生效</string>
+    <string name="about">关于</string>
+    <string name="app_ver">应用版本: </string>
+    <string name="imobile_ver">iMobile版本: </string>
+    <string name="graphics_type">显示引擎</string>
+
+    <!-- LicenseActivity -->
+    <string name="msg_input_sn">请输入许可激活码</string>
+    <string name="msg_activate_failed">激活失败: </string>
+    <string name="msg_activate_successful">激活成功</string>
+    <string name="msg_module_notice">请从左侧菜单栏选择有效的模块，必须至少有一个"Core_Dev"或"Core_Runtime"</string>
+    <string name="msg_license_file_error">激活成功，但许可无效.</string>
+    <string name="msg_licence_file_not_found">激活成功，但许可文件不存在：</string>
+    <string name="msg_open_datasource_failed">打开数据源失败: </string>
+
+    <string name="view_visibility">视图可见性设置</string>
+    <string name="environment_settings">显示引擎设置</string>
+    <string name="mapcontrol_settings">Map常规设置</string>
+</resources>

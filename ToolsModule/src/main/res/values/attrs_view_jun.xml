@@ -1,0 +1,26 @@
+<resources>
+    <declare-styleable name="JunMenu">
+        <attr name="menuStringJun" format="string" />
+        <attr name="menuDimensionJun" format="dimension" />
+        <attr name="menuColorJun" format="color" />
+        <attr name="menuDrawableJun" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="JunLinearLayout">
+        <attr name="baselineAlignedJun" format="boolean"/>
+        <attr name="weightSumJun" format="float"/>
+        <attr name="measureWithLargestChildJun" format="boolean"/>
+        <attr name="dividerJun" format="reference|color"/>
+        <attr name="dividerSize" format="dimension"/>
+        <attr name="showDividersJun" format="integer"/>
+        <attr name="dividerPaddingJun" format="integer"/>
+        <attr name="orientationJun" format="integer">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="gravityJun" format="integer"/>
+        <attr name="baselineAlignedChildIndexJun" format="integer"/>
+        <attr name="expanderAlign" format="integer"/> <!-- Start/End(0/1), default is Start -->
+
+    </declare-styleable>
+</resources>

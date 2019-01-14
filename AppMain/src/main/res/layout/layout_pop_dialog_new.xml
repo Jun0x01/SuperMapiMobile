@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <LinearLayout
+        android:layout_width="@dimen/pop_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/pop_dialog_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/dialog_create"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/pop_dialog_title_0_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/pop_dialog_title_width_1"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_path"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_title_1_size"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/new_edit_Path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dialog_hint_select_create_dir"
+                    android:maxLines="2"
+                    android:paddingRight="22dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/pop_dialog_edit_text_1_size" />
+
+                <TextView
+                    android:id="@+id/btn_select_path_new"
+                    android:layout_width="32dp"
+                    android:layout_height="48dp"
+                    android:layout_alignBottom="@id/new_edit_Path"
+                    android:layout_alignRight="@id/new_edit_Path"
+                    android:layout_marginRight="4dp"
+                    android:gravity="bottom|right"
+                    android:paddingBottom="16dp"
+                    android:text="...."
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/pop_dialog_title_width_1"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_type"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_title_1_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/new_edit_Type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="@string/hint_type"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_edit_text_1_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="@dimen/pop_dialog_title_width_1"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_title_1_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/new_edit_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_edit_text_1_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/pop_dialog_title_width_1"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_password"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_title_1_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/new_edit_Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_edit_text_1_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_Workspace_Version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="@dimen/pop_dialog_title_width_1"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_version"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_title_1_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/new_edit_Version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_edit_text_1_size"
+                android:focusable="false"
+                android:editable="false"/>
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_buttons_confirm_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/menu_sub_btn_container"
+            android:layout_width="@dimen/pop_menu_sub_navigation_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_frame_gray"
+            android:orientation="vertical"
+            android:paddingBottom="6dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingTop="6dp">
+
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_tools_MeasureArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_measure_area"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_tools_MeasureAngle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_measure_angle"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_tools_MeasureLength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_measure_length"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_tools_Magnifier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_tools_magnifier"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_tools_save_refresh_time_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                >
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:background="@drawable/bg_checkbox"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save refresh time log" />
+
+            </LinearLayout>
+
+            <!--<View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/gray_C0" />-->
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_tools_add_call_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:clickable="false"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add a CallOut" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_tools_other_functions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <View
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:clickable="false"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_tools_other_functions" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_tools_Swipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_tools_swipe"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_tools_LayerSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_tools_layer_settings"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

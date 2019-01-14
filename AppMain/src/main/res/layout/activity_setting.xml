@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:gravity="center"
+        android:text="@string/setting"
+        />
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ccc"
+        />
+   <ScrollView 
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       >
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:text="@string/license_path"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/layout_licencePath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp" >
+
+                <Button
+                    android:id="@+id/btn_select_path"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/bg_white_blue"
+                    android:text="..."
+                    android:textColor="@android:color/darker_gray"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    android:clickable="false"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_licence_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btn_select_path"
+                    android:text="..."
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ccc" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:text="@string/device_id_type"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+
+           <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:paddingLeft="16dp"
+                android:hint=""
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="10sp"
+                android:visibility="gone"/>
+            <RadioGroup
+                android:id="@+id/radioSwitchGroup_DeviceIDType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MAC" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IMEI" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="UUID" />
+            </RadioGroup>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingBottom="4dp"
+               android:paddingTop="4dp"
+               android:text="@string/language"
+               android:textColor="@android:color/black"
+               android:textSize="16sp" />
+           <RadioGroup
+               android:id="@+id/radioSwitchGroup_Language"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:paddingLeft="16dp"
+               android:paddingRight="16dp" >
+
+               <RadioButton
+                   android:id="@+id/btn_radio_chinese"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/chinese" />
+
+               <RadioButton
+                   android:id="@+id/btn_radio_english"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="@string/english" />
+
+           </RadioGroup>
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingBottom="4dp"
+               android:paddingTop="4dp"
+               android:text="@string/about"
+               android:textColor="@android:color/black"
+               android:textSize="16sp"/>
+           <TextView
+               android:id="@+id/txt_AppVersion"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingBottom="4dp"
+               android:paddingTop="4dp"
+               android:paddingLeft="16dp"
+               android:hint="@string/app_ver"
+               android:textColor="@android:color/black"
+               android:textSize="14sp" />
+           <TextView
+               android:id="@+id/txt_iMobileVersion"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:paddingBottom="4dp"
+               android:paddingTop="4dp"
+               android:paddingLeft="16dp"
+               android:hint="@string/imobile_ver"
+               android:textColor="@android:color/black"
+               android:textSize="14sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

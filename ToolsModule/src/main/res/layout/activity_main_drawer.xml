@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    >
+
+    // Container
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/darker_gray"
+            >
+            // Toolbar in the top
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                layout="@layout/layout_header"
+                />
+
+
+        </LinearLayout>
+
+        // Cover container some tool buttons
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_cover"
+            />
+
+    </FrameLayout>
+
+  <!--  <include
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginRight="72dp"
+        layout="@layout/layout_fragment_slide"
+        />
+        -->
+
+    <fragment
+        android:id="@+id/navigation_drawer"
+        android:name="com.jun.tools.DrawerLeft.DrawerLeftFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginRight="72dp"
+        tools:layout="@layout/layout_fragment_slide" />
+</android.support.v4.widget.DrawerLayout>
+
+

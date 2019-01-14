@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <include
+        android:layout_height="match_parent"
+        android:layout_width="280dp"
+        layout="@layout/layout_fragment_slide"
+        />
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <CheckBox
+            android:id="@+id/checkbox_Background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="Background"
+            />
+        <CheckBox
+            android:id="@+id/checkbox_InsideTouch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="InsideTouchable"
+            />
+        <CheckBox
+            android:id="@+id/checkbox_Focus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Focusable"
+            />
+
+
+        <CheckBox
+            android:id="@+id/checkbox_OutsideTouch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OutsideTouchable"
+            />
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

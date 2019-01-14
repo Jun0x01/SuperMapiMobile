@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/drawer_bottom"
+        android:orientation="vertical"
+        >
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/drawer_left_workspace_top"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:layout_marginRight="1dp"
+            >
+
+            <!--<android.support.v4.view.ViewPager
+                android:id="@+id/viewPager_Workspace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v4.view.ViewPager>-->
+            <com.jun.tools.View.JunViewPager
+                android:id="@+id/viewPager_Workspace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.jun.tools.View.JunViewPager>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>

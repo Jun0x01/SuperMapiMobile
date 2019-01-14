@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="layout_edit_top_column_count">7</integer>
+    <integer name="layout_edit_column_count">1</integer>
+
+</resources>

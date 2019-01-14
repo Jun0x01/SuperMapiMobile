@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Title -->
+    <string name="title_new">New ...</string>
+    <string name="title_open">Open ...</string>
+    <string name="title_name">Name:</string>
+    <string name="title_type">Type:</string>
+    <string name="title_password">Password:</string>
+    <string name="title_path">Path:</string>
+
+
+    <!-- Hint text -->
+    <string name="hint_select_file_path">Enter or select a file path</string>
+    <string name="hint_select_dir_path">Enter or select a directory</string>
+    <string name="hint_type">Choose a supported type</string>
+    <string name="enter_name">Enter a name</string>
+    <string name="enter_password">Enter password(Optional)</string>
+
+    <!-- Button -->
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_cancel">Cancel</string>
+
+
+    <!-- Notice -->
+    <string name="enter_select_path_open">Please enter or select a path of the file which you want to open.</string>
+    <string name="enter_select_path_new">Please enter or select a directory where you want to store the new files.</string>
+    <string name="unsupported_type">Unsupported data type!</string>
+
+    <!-- New --> <!-- Save As Workspace -->
+    <string name="file_type_choose">Choose a file type  to create.</string>
+    <string name="dir_input_for_storing">Please enter a directory to store your new files.</string>
+
+
+    <string name="dialog_export">Export...</string>
+    <string name="dialog_from">From:</string>
+    <string name="dialog_hint_dataset">Dataset</string>
+    <string name="dialog_type">Type:</string>
+    <string name="dialog_path">Path:</string>
+    <string name="dialog_hint_output_path">Output path</string>
+
+    <string name="dialog_import">Import...</string>
+    <string name="dialog_to">To:</string>
+    <string name="dialog_datasource">Datasource</string>
+    
+    <string name="dialog_navi_settings">Navigation Settings</string>
+    <string name="dialog_navi_data">Traditional Navigation\'s Data:</string>
+    <string name="dialog_navi_hint_data">Select the directory of Traditional Navigation data</string>
+    <string name="dialog_navi2_data">Industry Navigation\' Data:</string>
+    <string name="dialog_navi_hint_datasource">Select a datasource</string>
+    <string name="dialog_navi2_hint_dataset">Select a network dataset</string>
+    <string name="dialog_navi2_hint_model_file">Click and select a model file of Industry Navigation</string>
+    <string name="dialog_navi3_data">Indoor Navigation\' Data:</string>
+
+    <string name="dialog_create">Create....</string>
+    <string name="dialog_hint_select_create_dir">Select or enter a directory</string>
+    <string name="dialog_name">Name:</string>
+    <string name="dialog_password">Password:</string>
+    <string name="dialog_version">Version:</string>
+
+    <string name="dialog_open">Open....</string>
+    <string name="dialog_hit_select_path">Select a source path</string>
+    <string name="dialog_save_as_map">Save As Map ...</string>
+    <string name="dialog_save_as_workspace">Save As Workspace ...</string>
+
+    <string name="dialog_snap_settings">Snap Settings</string>
+    <string name="dialog_snap_node">Snap node</string>
+    <string name="dialog_snap_endpoint">Snap endpoint</string>
+    <string name="dialog_snap_point_on_line">Snap point on line</string>
+    <string name="dialog_snap_points_along_line">Snap points along line</string>
+    <string name="dialog_snap_tolerance">Tolerance: </string>
+    <string name="dialog_snap_max_count">Max count: </string>
+
+    <string name="pop_edit_geometry">Edit geometry</string>
+    <string name="pop_mapview_visible">MapView visible</string>
+    <string name="pop_mapview_gl_visible">MapViewGL visible</string>
+    <string name="pop_enable_mapview_gl">Enable MapViewGL</string>
+    <string name="pop_measure_area">Measure area</string>
+    <string name="pop_measure_angle">Measure Angle</string>
+    <string name="pop_measure_length">Measure length</string>
+    <string name="pop_tools_magnifier">Enable Magnifier</string>
+
+    <string name="pop_tools_swipe">Enable Swipe</string>
+    <string name="pop_tools_layer_settings">Enable Layer Settings</string>
+
+    <string name="pop_snap_settings">Snap settings</string>
+
+    <string name="pop_add_plot_library">Add plot library</string>
+    <string name="pop_remove_plot_library">Remove plot library</string>
+    <string name="pop_edit_settings">Edit settings</string>
+
+    <string name="pop_file_new">New</string>
+    <string name="pop_file_open">Open</string>
+    <string name="pop_file_import">Import</string>
+    <string name="pop_file_export">Export</string>
+    <string name="pop_file_save_map">Save Map</string>
+    <string name="pop_file_save_as_map">SaveAs Map</string>
+    <string name="pop_file_close_map">Close Map</string>
+    <string name="pop_file_save_workspace">Save Workspace</string>
+    <string name="pop_file_save_as_workspace">SaveAs Workspace</string>
+    <string name="pop_file_close_workspace">Close Workspace</string>
+
+    <string name="pop_navi1">Traditional Navigation</string>
+    <string name="pop_navi2">Industry Navigation</string>
+    <string name="pop_navi3">Indoor Navigation</string>
+    <string name="pop_navi_data_settings">Navigation Data Settings</string>
+
+    <string name="pop_tools_save_refresh_log">Save refresh time log</string>
+    <string name="pop_tools_add_a_callout">Add a CallOut</string>
+    <string name="pop_tools_other_functions">Other Functions</string>
+
+</resources>

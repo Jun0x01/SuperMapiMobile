@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:id="@+id/layout_config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/license_config_items_margin_horizontal"
+        android:layout_marginRight="@dimen/license_config_items_margin_horizontal"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/license_config_title_margin_top"
+            android:gravity="center"
+            android:paddingBottom="@dimen/license_config_title_padding_vertical"
+            android:paddingTop="@dimen/license_config_title_padding_vertical"
+            android:text="@string/license_config_item_text_local"
+            android:textColor="@color/license_config_title_color"
+            android:textSize="@dimen/license_config_title_size"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/license_config_activate_sub_title_padding_vertical"
+            android:paddingTop="@dimen/license_config_activate_sub_title_padding_vertical"
+            android:text="@string/license_config_local_sub_title_path"
+            android:textColor="@color/black"
+            android:textSize="@dimen/license_config_activate_sub_title_size"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/license_path_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:editable="false"
+            android:onClick="onClick"
+            />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_device_id_types"
+            />
+
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_buttons_cancel_confirm"
+        android:layout_below="@id/layout_config"
+        android:layout_marginTop="60dp"
+        />
+
+</RelativeLayout>

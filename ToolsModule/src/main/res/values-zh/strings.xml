@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ToolModules</string>
+
+    <string name="confirm">完成</string>
+    <string name="cancel">取消</string>
+
+    <string name="list_item_name_hint">Item</string>
+    <string name="list_item_info_hint">Item information</string>
+    <string name="activity_applist">Application List</string>
+
+    <string name="exit_notice">再次点击后退出</string>
+</resources>

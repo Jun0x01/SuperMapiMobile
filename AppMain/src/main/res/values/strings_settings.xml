@@ -1,0 +1,28 @@
+<resources>
+    <string name="activation">Activate</string>
+
+    <!-- Setting -->
+    <string name="setting">Setting</string>
+    <string name="license_path">License Path</string>
+    <string name="device_id_type">DeviceID Type</string>
+    <string name="device_id_type_note">Restart app to apply the change if needed.</string>
+    <string name="about">About</string>
+    <string name="app_ver">AppVer: </string>
+    <string name="imobile_ver">iMobileVer: </string>
+    <string name="graphics_type">Graphics Type</string>
+
+
+    <!-- LicenseActivity -->
+    <string name="msg_input_sn">Please input a License Code.</string>
+    <string name="msg_activate_failed">Activation Failed: </string>
+    <string name="msg_activate_successful">Activation Successful</string>
+    <string name="msg_module_notice">Please select valid modules from slide meu on the left first.
+Must select at lest one of "Core_Dev" and "Core_Runtime".</string>
+    <string name="msg_license_file_error">Activation Successful，but the license file is invalid.</string>
+    <string name="msg_licence_file_not_found">Activation Successful，but the default license file is not found: </string>
+    <string name="msg_open_datasource_failed">Open datasource failed: </string>
+
+    <string name="view_visibility">View\'s Visibility</string>
+    <string name="environment_settings">Graphics Settings</string>
+    <string name="mapcontrol_settings">Map General Settings</string>
+</resources>

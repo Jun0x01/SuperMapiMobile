@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/btn_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/license_config_activate_btn_margin_vertical"
+        android:layout_marginTop="@dimen/license_config_activate_btn_margin_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1.5" />
+
+        <Button
+            android:id="@+id/btn_Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/bg_state_white_blue_frame_gray_round_corner"
+            android:onClick="onClick"
+            android:text="@string/text_cancel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/license_config_activate_btn_text_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="2" />
+
+        <Button
+            android:id="@+id/btn_Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_state_white_blue_frame_gray_round_corner"
+            android:text="@string/text_confirm"
+            android:textColor="@color/black"
+            android:textSize="@dimen/license_config_activate_btn_text_size"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_bar"
+        android:layout_marginLeft="@dimen/license_config_items_margin_horizontal"
+        android:layout_marginRight="@dimen/license_config_items_margin_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/license_config_title_margin_top"
+            android:gravity="center"
+            android:paddingBottom="@dimen/license_config_title_padding_vertical"
+            android:paddingTop="@dimen/license_config_title_padding_vertical"
+            android:text="@string/license_config_item_text_activation"
+            android:textColor="@color/license_config_title_color"
+            android:textSize="@dimen/license_config_title_size"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/license_config_activate_sub_title_padding_vertical"
+            android:paddingTop="@dimen/license_config_activate_sub_title_padding_vertical"
+            android:text="@string/license_config_activate_sub_title_code"
+            android:textColor="@color/black"
+            android:textSize="@dimen/license_config_activate_sub_title_size" />
+
+        <AutoCompleteTextView
+            android:id="@+id/license_code_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:inputType="textCapWords"
+            />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_device_id_types"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="@dimen/license_config_activate_sub_title_padding_vertical"
+            android:paddingTop="@dimen/license_config_activate_sub_title_padding_vertical"
+            android:text="@string/license_config_activate_sub_title_module"
+            android:textColor="@color/black"
+            android:textSize="@dimen/license_config_activate_sub_title_size" />
+
+        <ListView
+            android:id="@+id/list_modules"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="multipleChoice"
+            android:background="@drawable/bg_white_frame_gray">
+
+        </ListView>
+    </LinearLayout>
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"/>-->
+</RelativeLayout>

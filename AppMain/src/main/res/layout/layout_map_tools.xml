@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout_map_tools"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/layout_zoom"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:clickable="true">
+
+        <ImageButton
+            android:id="@+id/fullscreen"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_white_blue"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/fullscreen" />
+
+        <ImageButton
+            android:id="@+id/zoom_in"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_white_blue"
+            android:gravity="center"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/plus" />
+
+        <View
+            android:layout_width="22dp"
+            android:layout_height="1dp"
+            android:layout_margin="4dp"
+            android:background="@color/gray_A" />
+
+        <ImageButton
+            android:id="@+id/zoom_out"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_white_blue"
+            android:gravity="center"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/minus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_location_refresh"
+        android:layout_width="36dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:clickable="true"
+        android:orientation="vertical"
+        >
+
+        <ImageButton
+            android:id="@+id/refresh"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_white_blue"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/refresh" />
+
+        <ImageButton
+            android:id="@+id/location"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_white_blue"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/location" />
+    </LinearLayout>
+
+    <com.supermap.mapping.ScaleView
+        android:id="@+id/mapScaleView"
+        android:layout_width="100dp"
+        android:layout_height="28dp"
+        android:layout_alignBottom="@id/layout_zoom"
+        android:layout_toLeftOf="@id/layout_zoom"
+        android:clickable="false" />
+
+    <com.supermap.mapping.LegendView
+        android:id="@+id/mapLegendView"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@id/layout_zoom"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:background="@color/white"
+        android:clickable="false"
+        android:visibility="gone" />
+
+    <!-- ******************Edit Tools************************ -->
+    <RelativeLayout
+        android:id="@+id/layout_edit_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="@dimen/btn_edit_geo_img_padding"
+        android:visibility="gone"
+        >
+
+        <GridLayout
+            android:id="@+id/layout_edit_general_functions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#ddc0c0c0"
+            android:columnCount="@integer/layout_edit_top_column_count"
+            android:clickable="true"
+            >
+
+            <LinearLayout
+                android:id="@+id/btn_edit_geo_undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_edit_geo"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                android:clickable="true"
+                android:tag="@string/tag_btn_edit_geo_item"
+                >
+
+                <ImageButton
+                    android:layout_width="@dimen/btn_edit_geo_top_img_width"
+                    android:layout_height="@dimen/btn_edit_geo_top_img_height"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_edit_geo_img_padding"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/undo"
+                    android:clickable="false"
+                    android:background="@color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                    android:gravity="center"
+                    android:text="undo"
+                    android:textColor="@color/btn_edit_geo_name_color"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_edit_geo_redo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_edit_geo"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                android:clickable="true"
+                android:tag="@string/tag_btn_edit_geo_item"
+                >
+
+                <ImageButton
+                    android:layout_width="@dimen/btn_edit_geo_top_img_width"
+                    android:layout_height="@dimen/btn_edit_geo_top_img_height"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_edit_geo_img_padding"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/redo"
+                    android:clickable="false"
+                    android:background="@color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                    android:gravity="center"
+                    android:text="redo"
+                    android:textColor="@color/btn_edit_geo_name_color"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_edit_geo_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_edit_geo"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                android:clickable="true"
+                android:tag="@string/tag_btn_edit_geo_item">
+
+                <ImageButton
+                    android:layout_width="@dimen/btn_edit_geo_top_img_width"
+                    android:layout_height="@dimen/btn_edit_geo_top_img_height"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_edit_geo_img_padding"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/cancel"
+                    android:clickable="false"
+                    android:background="@color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                    android:gravity="center"
+                    android:text="cancel"
+                    android:textColor="@color/btn_edit_geo_name_color"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_edit_geo_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_edit_geo"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                android:clickable="true"
+                android:tag="@string/tag_btn_edit_geo_item">
+
+                <ImageButton
+                    android:layout_width="@dimen/btn_edit_geo_top_img_width"
+                    android:layout_height="@dimen/btn_edit_geo_top_img_height"
+                    android:gravity="center"
+                    android:padding="@dimen/btn_edit_geo_img_padding"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/done"
+                    android:clickable="false"
+                    android:background="@color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                    android:gravity="center"
+                    android:text="done"
+                    android:textColor="@color/btn_edit_geo_name_color"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_edit_geo_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_edit_geo"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                android:clickable="true"
+                android:tag="@string/tag_btn_edit_geo_item">
+
+                <ImageButton
+                    android:layout_width="@dimen/btn_edit_geo_top_img_width"
+                    android:layout_height="@dimen/btn_edit_geo_top_img_height"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/delete"
+                    android:clickable="false"
+                    android:background="@color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                    android:gravity="center"
+                    android:text="delete"
+                    android:textColor="@color/btn_edit_geo_name_color"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_edit_geo_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_edit_geo"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                android:clickable="true"
+                android:tag="@string/tag_btn_edit_geo_item">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="@dimen/btn_edit_geo_top_img_width"
+                    android:layout_height="@dimen/btn_edit_geo_top_img_height"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/select"
+                    android:clickable="false"
+                    android:background="@color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                    android:gravity="center"
+                    android:text="select"
+                    android:textColor="@color/btn_edit_geo_name_color"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_edit_geo_pan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_edit_geo"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                android:clickable="true"
+                android:tag="@string/tag_btn_edit_geo_item">
+
+                <ImageButton
+                    android:layout_width="@dimen/btn_edit_geo_top_img_width"
+                    android:layout_height="@dimen/btn_edit_geo_top_img_height"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/pan"
+                    android:clickable="false"
+                    android:background="@color/transparent"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                    android:gravity="center"
+                    android:text="pan"
+                    android:textColor="@color/btn_edit_geo_name_color"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </GridLayout>
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="@color/blue_09F"-->
+            <!--/>-->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_edit_general_functions"
+            android:clickable="true">
+        <ScrollView
+            android:id="@+id/layout_edit_main_functions"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btn_edit_geo_sub_frame_height"
+            android:layout_marginTop="4dp"
+            android:background="#ddc0c0c0"
+            ><!--@dimen/btn_edit_geo_sub_frame_height-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:columnCount="@integer/layout_edit_column_count"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/point"
+                            android:clickable="false"
+                            android:background="@color/transparent"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="point"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/line"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="line"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_region"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/region"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="region"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_freeline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/freeline"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="freeline"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_freeregion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/freeregion"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="freeregion"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_freedraw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/freedraw"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="freedraw"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:columnCount="@integer/layout_edit_column_count">
+
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_edit_node"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/edit_node"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="point"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_move_common_node"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/edit_same_node"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="editsamenode"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_add_node"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/add_node"
+                            android:clickable="false"
+                            android:background="@color/transparent"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:text="addnode"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_delete_node"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/delete_node"
+                            android:clickable="false"
+                            android:background="@color/transparent"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:text="deletenode"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_rect_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/rectselect"
+                            android:clickable="false"
+                            android:background="@color/transparent"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:text="rectselect"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_mult_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/multiselect"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="regionsplit"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:columnCount="@integer/layout_edit_column_count"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_edit_erase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:tag="@string/tag_btn_edit_geo_item"
+                        android:clickable="true"
+                        >
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/erase"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="erase"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_edit_intersect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/intersect"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="intersect"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_compose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/compose"
+                            android:clickable="false"
+                            android:background="@color/transparent"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:text="compose"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_union"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/union"
+                            android:clickable="false"
+                            android:background="@color/transparent"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:text="union"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_split_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/linesplit"
+                            android:clickable="false"
+                            android:background="@color/transparent"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:text="linesplit"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+            <!--        <LinearLayout
+                        android:id="@+id/btn_edit_geo_split_region"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/regionsplit"
+                            android:clickable="false"
+                            android:background="@color/transparent"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="regionsplit"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>-->
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:columnCount="@integer/layout_edit_column_count"
+                    >
+
+                    <!--<LinearLayout
+                        android:id="@+id/btn_edit_geo_draw_hollow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/drawhollow"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="drawhollow"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>-->
+
+               <!--     <LinearLayout
+                        android:id="@+id/btn_edit_geo_compose_hollow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/drawcomposehollow"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="drawcomposehollow"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>-->
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_fill_hollow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/drawfillhollow"
+                            android:clickable="false"
+                            android:background="@color/transparent"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:text="drawfillhollow"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_split_hollow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/drawsplithollow"
+                            android:clickable="false"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:text="drawsplithollow"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_create_same_frame_region"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/createsameframeregion"
+                            android:clickable="false"
+                            android:background="@color/transparent"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:text="createsameframeregion"
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:visibility="gone"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_multi_fill_hollow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/drawmultifillhollow"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="drawmultifillhollow"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_split_selfIntersect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/drawmultifillhollow"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="SelfSplit"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btn_edit_geo_move"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn_edit_geo"
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/btn_edit_geo_item_margin"
+                        android:clickable="true"
+                        android:tag="@string/tag_btn_edit_geo_item">
+
+                        <ImageButton
+                            android:layout_width="@dimen/btn_edit_geo_img_width"
+                            android:layout_height="@dimen/btn_edit_geo_img_height"
+                            android:gravity="center"
+                            android:padding="@dimen/btn_edit_geo_img_padding"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/pan"
+                            android:clickable="false"
+                            android:background="@color/transparent"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/btn_edit_name_margin_bottom"
+                            android:gravity="center"
+                            android:text="MoveGeo"
+                            android:textColor="@color/btn_edit_geo_name_color"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+                </GridLayout>
+            </LinearLayout>
+
+        </ScrollView>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!--************* Measure Length and Area *********************-->
+    <FrameLayout
+        android:id="@+id/layout_measure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:background="@color/gray_D"
+        android:paddingLeft="1dp"
+        android:paddingRight="8dp"
+        android:clickable="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout_measure_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            >
+            <ImageButton
+                android:id="@+id/btn_measure_length_clear"
+                android:layout_width="@dimen/btn_navi_size"
+                android:layout_height="@dimen/btn_navi_size"
+                android:layout_marginRight="2dp"
+                android:gravity="center"
+                android:padding="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/delete"
+                android:background="@drawable/bg_btn_navi"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/measured_length"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_measured_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:lines="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:hint="0000" />
+
+            <TextView
+                android:id="@+id/text_measure_length_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/measured_length_unit_m"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_measure_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            >
+            <ImageButton
+                android:id="@+id/btn_measure_area_clear"
+                android:layout_width="@dimen/btn_navi_size"
+                android:layout_height="@dimen/btn_navi_size"
+                android:layout_marginRight="2dp"
+                android:gravity="center"
+                android:padding="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/delete"
+                android:background="@drawable/bg_btn_navi"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/measured_area"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_measured_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:lines="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:hint="0000" />
+
+            <TextView
+                android:id="@+id/text_measure_area_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/measured_area_unit_m"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_measure_angle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            >
+            <ImageButton
+                android:id="@+id/btn_measure_angle_clear"
+                android:layout_width="@dimen/btn_navi_size"
+                android:layout_height="@dimen/btn_navi_size"
+                android:layout_marginRight="2dp"
+                android:gravity="center"
+                android:padding="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/delete"
+                android:background="@drawable/bg_btn_navi"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/measured_angle"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_measured_angle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:lines="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:hint="00000" />
+
+            <TextView
+                android:id="@+id/text_measure_angle_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/measured_angle_unit"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--************* Navigation *********************-->
+    <LinearLayout
+        android:id="@+id/layout_navigation_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#bb808080"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/layout_measure"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:clickable="true"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_navi_start_point"
+            android:layout_width="@dimen/btn_navi_size"
+            android:layout_height="@dimen/btn_navi_size"
+            android:gravity="center"
+            android:padding="@dimen/btn_edit_geo_img_padding"
+            android:scaleType="centerInside"
+            android:src="@drawable/startpoint"
+            android:background="@drawable/bg_btn_navi"/>
+
+        <ImageButton
+            android:id="@+id/btn_navi_dest_point"
+            android:layout_width="@dimen/btn_navi_size"
+            android:layout_height="@dimen/btn_navi_size"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:padding="@dimen/btn_edit_geo_img_padding"
+            android:scaleType="centerInside"
+            android:src="@drawable/destpoint"
+            android:background="@drawable/bg_btn_navi"/>
+
+        <ImageButton
+            android:id="@+id/btn_navi_start_navi"
+            android:layout_width="@dimen/btn_navi_size"
+            android:layout_height="@dimen/btn_navi_size"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:padding="@dimen/btn_edit_geo_img_padding"
+            android:scaleType="centerInside"
+            android:src="@drawable/navi"
+            android:background="@drawable/bg_btn_navi"/>
+        <ImageButton
+            android:id="@+id/btn_navi_clear"
+            android:layout_width="@dimen/btn_navi_size"
+            android:layout_height="@dimen/btn_navi_size"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:padding="@dimen/btn_edit_geo_img_padding"
+            android:scaleType="centerInside"
+            android:src="@drawable/delete"
+            android:background="@drawable/bg_btn_navi"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

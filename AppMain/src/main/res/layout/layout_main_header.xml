@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue_0FF"
+    android:id="@+id/layout_main_header"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/text_Menu"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:background="@drawable/menu_blue"
+            android:scaleType="centerInside"
+            />
+
+        <TextView
+            android:id="@+id/text_File"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/main_header_margin_left"
+            android:text="@string/menu_bar_file"
+            android:textColor="@color/main_header_text_color"
+            android:textStyle="bold"
+            android:textSize="@dimen/main_header_btn_text_size"
+            android:onClick="onClick"
+            />
+
+        <TextView
+            android:id="@+id/text_Edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/main_header_margin_left"
+            android:text="@string/menu_bar_edit"
+            android:textColor="@color/main_header_text_color"
+            android:textStyle="bold"
+            android:textSize="@dimen/main_header_btn_text_size"
+            android:onClick="onClick"
+            />
+        <TextView
+            android:id="@+id/text_Navigation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/main_header_margin_left"
+            android:text="@string/menu_bar_navigation"
+            android:textColor="@color/main_header_text_color"
+            android:textStyle="bold"
+            android:textSize="@dimen/main_header_btn_text_size"
+            android:onClick="onClick"
+            />
+        <TextView
+            android:id="@+id/text_Tools"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/main_header_margin_left"
+            android:text="@string/menu_bar_tools"
+            android:textColor="@color/main_header_text_color"
+            android:textStyle="bold"
+            android:textSize="@dimen/main_header_btn_text_size"
+            android:onClick="onClick"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

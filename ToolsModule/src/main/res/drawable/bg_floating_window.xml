@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <size android:height="@dimen/floating_window_radius_size"
+        android:width="@dimen/floating_window_radius_size"
+        />
+    <corners android:radius="@dimen/floating_window_radius"/>
+    <gradient android:type="radial"
+        android:endColor="@color/yellow"
+        android:startColor="@color/red"
+        android:gradientRadius="@dimen/floating_window_radius"
+        /><!--android:centerColor="@color/red"-->
+</shape>

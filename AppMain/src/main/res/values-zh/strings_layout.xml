@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">语言</string>
+    <string name="chinese">中文</string>
+    <string name="english">英文</string>
+
+    <string name="legend_view">图例</string>
+    <string name="scale_view">比例尺</string>
+    <string name="rotate_map">地图旋转</string>
+    <string name="slant_map">地图倾斜</string>
+    <string name="dynamic_projection">动态投影</string>
+
+    <string name="workspace_name_hint">工作空间名称</string>
+    <string name="title_datasources">数据源</string>
+    <string name="title_datasets">数据集</string>
+    <string name="title_map">地图</string>
+
+    <string name="menu_bar_file">文件</string>
+    <string name="menu_bar_edit">编辑</string>
+    <string name="menu_bar_navigation">导航</string>
+    <string name="menu_bar_tools">工具</string>
+
+    <string name="add_layers">添加图层</string>
+    <string name="select_cancel">取消</string>
+
+    <string name="measured_length">长度:</string>
+    <string name="measured_length_unit_m">m</string>
+    <string name="measured_length_unit_km">km</string>
+
+    <string name="measured_area">面积:</string>
+    <string name="measured_area_unit_m">m²</string>
+    <string name="measured_area_unit_km">km²</string>
+
+    <string name="measured_angle">角度:</string>
+    <string name="measured_angle_unit">°</string>
+
+    <!-- License Configuration -->
+
+    <string name="license_config_title_text">许可配置</string>
+
+    <string name="license_config_item_text_local">本地许可</string>
+    <string name="license_config_item_text_local_description">点击并选择一个有效的许可目录</string>
+    <string name="license_config_item_text_activation">激活许可</string>
+    <string name="license_config_item_text_activation_description">使用一个有效的许可序列号来激活许可</string>
+    <string name="license_config_item_text_cloud">超图云许可</string>
+    <string name="license_config_item_text_cloud_description">登录超图云账户获取云许可</string>
+
+    <string name="license_config_local_sub_title_path">许可路径:</string>
+    <string name="license_config_activate_sub_title_code">许可序列号:</string>
+    <string name="license_config_activate_sub_title_type">设备ID类型:</string>
+    <string name="license_config_activate_sub_title_module">许可模块:</string>
+    <string name="license_config_device_id_type_hint">通常不需要修改它，若果修改了，需要完全重启。</string>
+
+
+    <string name="license_config_cloud_username_hint">用户名或邮件地址</string>
+    <string name="license_config_cloud_password_hint">密码</string>
+    <string name="license_config_cloud_checkbox_save">保存密码</string>
+    <string name="license_config_cloud_checkbox_default">使用默认账号</string>
+    <string name="license_config_cloud_btn_sign_in">登录</string>
+
+</resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/bot"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_gray_1"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:gravity="center_vertical"
+        >
+
+        <TextView
+            android:id="@+id/btn_AddLayers"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black_red"
+            android:textSize="18sp"
+            android:text="@string/add_layers"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/btn_Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black_red"
+            android:textSize="18sp"
+            android:text="@string/select_cancel"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/btn_Open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/black_red"
+            android:textSize="12sp"
+            android:text="Open"
+            android:visibility="gone"
+            android:gravity="center"
+            />
+    </LinearLayout>
+    
+    <ListView
+        android:id="@+id/list_datasets"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bot"
+        android:choiceMode="multipleChoice"
+        >
+
+    </ListView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_setting_datasets"
+        android:visibility="gone"
+        >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gray_1"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <TextView
+                        android:id="@+id/btn_AddLayers1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="Add to Map"
+                        android:textColor="@color/black_red"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/btn_Cancel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Cancel"
+                        android:textColor="@color/black_red"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:textColor="@color/black_red" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_Close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Close"
+                    android:textColor="@color/black_red"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

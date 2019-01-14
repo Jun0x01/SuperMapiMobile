@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AppMain/AppMain.iml" filepath="$PROJECT_DIR$/AppMain/AppMain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SuperMapiMobile.iml" filepath="$PROJECT_DIR$/SuperMapiMobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToolsModule/ToolsModule.iml" filepath="$PROJECT_DIR$/ToolsModule/ToolsModule.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <include
+        android:id="@+id/drawer_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/drawer_left_main_bottom"
+        android:visibility="gone"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/drawer_bottom"
+        android:orientation="vertical"
+        >
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/drawer_left_main_top"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_D"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox_RandomBrowser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RandomBrowse"
+                    android:visibility="visible" />
+                <CheckBox
+                    android:id="@+id/checkbox_AutoPan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AutoPan"
+                    android:visibility="visible" />
+                <CheckBox
+                    android:id="@+id/checkbox_AutoZoom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AutoZoom"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="@string/view_visibility" />
+
+                <Switch
+                    android:id="@+id/switch_LegendView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/legend_view"
+                    android:checked="true"
+                    />
+
+                <Switch
+                    android:id="@+id/switch_ScaleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/scale_view" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/environment_settings" />
+
+                <Switch
+                    android:id="@+id/switch_OpenGL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="OpenGL"
+                    android:checked="true"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/mapcontrol_settings" />
+
+                <Switch
+                    android:id="@+id/switch_RotateMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/rotate_map"
+                    />
+
+                <Switch
+                    android:id="@+id/switch_SlantMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/slant_map"
+                    />
+
+                <Switch
+                    android:id="@+id/switch_DynamicProjection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/dynamic_projection"
+                    />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="@dimen/pop_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/pop_dialog_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/dialog_navi_settings"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/pop_dialog_title_0_size" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_navi_data"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/pop_dialog_title_1_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/navi_data_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dialog_navi_hint_data"
+                    android:maxLines="2"
+                    android:paddingRight="22dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/pop_dialog_edit_text_1_size"
+                    android:editable="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/btn_select_path_open"
+                    android:layout_width="32dp"
+                    android:layout_height="48dp"
+                    android:layout_alignBottom="@id/navi_data_path"
+                    android:layout_alignRight="@id/navi_data_path"
+                    android:layout_marginRight="4dp"
+                    android:gravity="bottom|right"
+                    android:paddingBottom="16dp"
+                    android:text="...."
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_navi2_data"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/pop_dialog_title_1_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/navi2_datasource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="@string/dialog_navi_hint_datasource"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_edit_text_1_size" />
+
+            <EditText
+                android:id="@+id/navi2_net_dataset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="@string/dialog_navi2_hint_dataset"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_edit_text_1_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/navi2_data_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dialog_navi2_hint_model_file"
+                    android:maxLines="2"
+                    android:paddingRight="22dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/pop_dialog_edit_text_1_size"
+                    android:editable="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/btn_select_path_open2"
+                    android:layout_width="32dp"
+                    android:layout_height="48dp"
+                    android:layout_alignBottom="@id/navi2_data_path"
+                    android:layout_alignRight="@id/navi2_data_path"
+                    android:layout_marginRight="4dp"
+                    android:gravity="bottom|right"
+                    android:paddingBottom="16dp"
+                    android:text="...."
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_navi3_data"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/pop_dialog_title_1_size"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/navi3_datasource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:focusable="false"
+                android:hint="@string/dialog_navi_hint_datasource"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_edit_text_1_size" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_buttons_confirm_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

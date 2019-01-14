@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/menu_sub_btn_container"
+            android:layout_width="@dimen/pop_menu_sub_navigation_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_frame_gray"
+            android:orientation="vertical"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_navi_tradition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_navi1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_navi_industry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_navi2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_navi_indoor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_navi3" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/gray_C0"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_navigation_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <View
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_navi_data_settings" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

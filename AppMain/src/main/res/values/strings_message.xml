@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tag_navi">Navigation</string>
+    <string name="long_touch_map">Long touch on the map</string>
+
+    <string name="workspace_was_opened">This workspace was opened.</string>
+    <string name="creating_workspace">Creating a workspace....</string>
+    <string name="create_workspace_success">Successfully, create workspace</string>
+    <string name="create_workspace_fail">Failed, create workspace.</string>
+
+    <string name="open_workspace">Opening the workspace....</string>
+    <string name="open_workspace_success">Successfully, open workspace</string>
+    <string name="open_workspace_fail">Failed, open workspace.</string>
+
+
+    <string name="creating_datasource">Creating a workspace....</string>
+    <string name="create_datasource_success">Successfully, create datasource</string>
+    <string name="create_datasource_fail">Failed, create datasource.</string>
+
+    <string name="datasource_was_opened">This file was opened.</string>
+    <string name="datasource_was_opened_web">This web source was opened.</string>
+    <string name="open_datasource">Opening the datasource....</string>
+    <string name="open_datasource_success">Successfully, open datasource</string>
+    <string name="open_datasource_fail">Failed, open datasource.</string>
+
+    <string name="saved_map">Saved Map: </string>
+    <string name="save_map_failed">Failed to save the map.</string>
+    <string name="save_map_exception">An exception occurred in saving the map.</string>
+    <string name="input_name">Please enter a name.</string>
+    <string name="map_existed">The map has existed. Please change the name again.</string>
+    <string name="saved_new_map">Saved new map: </string>
+    <string name="save_map_not_necessary">Not necessary to save, this map does not contain any layer.</string>
+    <string name="saved_as_map">Saved as Map: </string>
+    <string name="closed_map">Closed Map: </string>
+
+    <string name="saved_workspace">Saved workspace: </string>
+    <string name="save_workspace_failed">Failed to save the workspace.</string>
+    <string name="save_workspace_exception">An exception occurred in saving the workspace.</string>
+
+    <string name="empty_path">The path is empty.</string>
+    <string name="path_not_change">The path is same with the old.</string>
+    <string name="path_existed">The target file has existed, please change it again.</string>
+    <string name="close_workspace">Closed Workspace: </string>
+
+    <string name="loading_navigation">Loading navigation data....</string>
+    <string name="update_navi_data_needed">Please update navigation data, \'Navigation > Navigation Data Settings\'</string>
+    <string name="no_path_start_position">No path around the start position.</string>
+    <string name="no_path_destnation">No path around the destination.</string>
+    <string name="route_analyst_failed">Route analyst failed.</string>
+    <string name="choose_a_navigation">Please choose a specific Navigation from \'Navigation\' in the menu bar.</string>
+
+    <string name="navigation_data_setting">Initializing navigation data....</string>
+
+    <string name="location_outside_map">Your location is not on the map.</string>
+
+
+    <!-- License Configuration -->
+    <string name="license_valid">License is valid.</string>
+    <string name="license_invalid">License is invalid.</string>
+    <string name="license_deviceidtype_changed">The DeviceIDType has been change, force stop the app and restart it.</string>
+    <string name="license_path_not_changed">The License path is not changed.</string>
+    <string name="license_activating">Activating ...</string>
+
+    <string name="license_sign_in">Signing in ...</string>
+    <string name="license_sign_invalid">Signed in, but the license is invalid</string>
+    <string name="license_sign_username_less">The username may not be less than 4 characters.</string>
+    <string name="license_sign_password_less">The password may not be less than 4 characters.</string>
+
+
+</resources>

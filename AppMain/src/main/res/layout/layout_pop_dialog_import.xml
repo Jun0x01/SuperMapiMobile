@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <LinearLayout
+        android:layout_width="@dimen/pop_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/pop_dialog_padding"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_import"
+            android:textSize="@dimen/pop_dialog_title_0_size"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="@dimen/pop_dialog_title_width_1"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_path"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/pop_dialog_title_1_size"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/import_edit_Path"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/pop_dialog_edit_text_1_size"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="@dimen/pop_dialog_title_width_1"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_type"
+                android:textSize="@dimen/pop_dialog_title_1_size"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/import_edit_Type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/pop_dialog_edit_text_1_size"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="@dimen/pop_dialog_title_width_1"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_to"
+                android:textSize="@dimen/pop_dialog_title_1_size"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/new_edit_Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/pop_dialog_edit_text_1_size"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:hint="@string/dialog_datasource"
+                />
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_buttons_confirm_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

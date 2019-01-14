@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/license_config_title_margin_top"
+        android:gravity="center"
+        android:paddingBottom="@dimen/license_config_title_padding_vertical"
+        android:paddingTop="@dimen/license_config_title_padding_vertical"
+        android:text="@string/license_config_title_text"
+        android:textColor="@color/license_config_title_color"
+        android:textSize="@dimen/license_config_title_size"
+        android:textStyle="bold"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/license_config_items_margin_horizontal"
+        android:layout_marginRight="@dimen/license_config_items_margin_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="@dimen/license_config_item_margin_top"
+            android:background="@color/gray_8" />
+
+        <!-- Local License -->
+        <LinearLayout
+            android:id="@+id/licence_local"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:onClick="onClick"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/license_config_item_padding_vertical"
+                android:paddingTop="@dimen/license_config_item_padding_vertical"
+                android:text="@string/license_config_item_text_local"
+                android:textColor="@color/license_config_item_text_color"
+                android:textSize="@dimen/license_config_item_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/license_config_item_description_text_marginLeft"
+                android:text="@string/license_config_item_text_local_description"
+                android:textColor="@color/license_config_item_description_text_color"
+                android:textSize="@dimen/license_config_item_description_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="@dimen/license_config_item_margin_top"
+            android:background="@color/gray_8"
+            android:visibility="gone"/>
+
+
+        <!-- Activate License -->
+        <LinearLayout
+            android:id="@+id/licence_activate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:onClick="onClick"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/license_config_item_padding_vertical"
+                android:paddingTop="@dimen/license_config_item_padding_vertical"
+                android:text="@string/license_config_item_text_activation"
+                android:textColor="@color/license_config_item_text_color"
+                android:textSize="@dimen/license_config_item_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/license_config_item_description_text_marginLeft"
+                android:text="@string/license_config_item_text_activation_description"
+                android:textColor="@color/license_config_item_description_text_color"
+                android:textSize="@dimen/license_config_item_description_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="@dimen/license_config_item_margin_top"
+            android:background="@color/gray_8" />
+
+
+        <!-- Cloud License -->
+        <LinearLayout
+            android:id="@+id/licence_cloud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:onClick="onClick">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/license_config_item_padding_vertical"
+                android:paddingTop="@dimen/license_config_item_padding_vertical"
+                android:text="@string/license_config_item_text_cloud"
+                android:textColor="@color/license_config_item_text_color"
+                android:textSize="@dimen/license_config_item_text_size" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/license_config_item_description_text_marginLeft"
+                android:text="@string/license_config_item_text_cloud_description"
+                android:textColor="@color/license_config_item_description_text_color"
+                android:textSize="@dimen/license_config_item_description_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

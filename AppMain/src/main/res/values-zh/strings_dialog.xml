@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Title -->
+    <string name="title_new">新建 ...</string>
+    <string name="title_open">打开 ...</string>
+    <string name="title_name">名称:</string>
+    <string name="title_type">类型:</string>
+    <string name="title_password">密码:</string>
+    <string name="title_path">路径:</string>
+
+
+    <!-- Hint text -->
+    <string name="hint_select_file_path">选择或输入一个文件路径</string>
+    <string name="hint_select_dir_path">输入或选择一个目录</string>
+    <string name="hint_type">选择一个数据类型</string>
+    <string name="enter_name">输入名称</string>
+    <string name="enter_password">输入密码(可选)</string>
+
+    <!-- Button -->
+    <string name="btn_confirm">确认</string>
+    <string name="btn_cancel">取消</string>
+
+
+    <!-- Notice -->
+    <string name="enter_select_path_open">输入或选择一个需要打开的文件路径</string>
+    <string name="enter_select_path_new">输入或选择保存文件的目录</string>
+    <string name="unsupported_type">不支持的数据类型</string>
+
+    <!-- New --> <!-- Save As Workspace -->
+    <string name="file_type_choose">选择需要新建的数据类型</string>
+    <string name="dir_input_for_storing">输入或选择保存文件的目录</string>
+
+
+    <string name="dialog_export">导出...</string>
+    <string name="dialog_from">导出数据集:</string>
+    <string name="dialog_hint_dataset"></string>
+    <string name="dialog_type">类型:</string>
+    <string name="dialog_path">路径:</string>
+    <string name="dialog_hint_output_path">输出目录</string>
+
+    <string name="dialog_import">导入...</string>
+    <string name="dialog_to">目标数据源:</string>
+    <string name="dialog_datasource"></string>
+    
+    <string name="dialog_navi_settings">导航设置</string>
+    <string name="dialog_navi_data">传统导航的数据</string>
+    <string name="dialog_navi_hint_data">选择数据所在目录</string>
+    <string name="dialog_navi2_data">行业导航的数据</string>
+    <string name="dialog_navi_hint_datasource">选择数据源</string>
+    <string name="dialog_navi2_hint_dataset">选择网络数据集</string>
+    <string name="dialog_navi2_hint_model_file">点击选择一个模型文件</string>
+    <string name="dialog_navi3_data">室内导航的数据</string>
+
+    <string name="dialog_create">创建....</string>
+    <string name="dialog_hint_select_create_dir">输入或选择一个目录</string>
+    <string name="dialog_name">名称:</string>
+    <string name="dialog_password">密码:</string>
+    <string name="dialog_version">版本:</string>
+
+    <string name="dialog_open">打开....</string>
+    <string name="dialog_hit_select_path">选择一个文件</string>
+    <string name="dialog_save_as_map">另存为地图 ...</string>
+    <string name="dialog_save_as_workspace">另存为工作空间 ...</string>
+
+    <string name="dialog_snap_settings">捕捉设置</string>
+    <string name="dialog_snap_node">捕捉节点</string>
+    <string name="dialog_snap_endpoint">捕捉端点</string>
+    <string name="dialog_snap_point_on_line">捕捉线上的点</string>
+    <string name="dialog_snap_points_along_line">沿线捕捉</string>
+    <string name="dialog_snap_tolerance">捕捉容限: </string>
+    <string name="dialog_snap_max_count">最大捕捉数: </string>
+
+    <string name="pop_edit_geometry">编辑几何对象</string>
+    <string name="pop_mapview_visible">矢量地图可见</string>
+    <string name="pop_mapview_gl_visible">GL地图可见</string>
+    <string name="pop_enable_mapview_gl">启用GL地图</string>
+    <string name="pop_measure_area">测量面积</string>
+    <string name="pop_measure_angle">测量角度</string>
+    <string name="pop_measure_length">测量距离</string>
+    <string name="pop_tools_magnifier">开启放大镜</string>
+
+    <string name="pop_tools_swipe">开启卷帘</string>
+    <string name="pop_tools_layer_settings">开启图层属性设置</string>
+
+    <string name="pop_snap_settings">编辑绘制捕捉设置</string>
+    <string name="pop_add_plot_library">添加态势标绘库</string>
+    <string name="pop_remove_plot_library">移除态势标绘库</string>
+    <string name="pop_edit_settings">编辑设置</string>
+
+    <string name="pop_file_new">新建</string>
+    <string name="pop_file_open">打开</string>
+    <string name="pop_file_import">导入</string>
+    <string name="pop_file_export">导出</string>
+    <string name="pop_file_save_map">保存地图</string>
+    <string name="pop_file_save_as_map">另存为地图</string>
+    <string name="pop_file_close_map">关闭地图</string>
+    <string name="pop_file_save_workspace">保存工作空间</string>
+    <string name="pop_file_save_as_workspace">另存为工作空间</string>
+    <string name="pop_file_close_workspace">关闭工作空间</string>
+
+    <string name="pop_navi1">传统导航</string>
+    <string name="pop_navi2">行业导航</string>
+    <string name="pop_navi3">室内导航</string>
+    <string name="pop_navi_data_settings">导航数据设置</string>
+
+    <string name="pop_tools_save_refresh_log">保存地图刷新时间日志</string>
+    <string name="pop_tools_add_a_callout">添加CallOut</string>
+    <string name="pop_tools_other_functions">其他功能</string>
+</resources>

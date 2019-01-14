@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/menu_sub_btn_container"
+            android:layout_width="@dimen/pop_menu_sub_Edit_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_frame_gray"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_edit_EditGeo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_edit_geometry"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_edit_mapview_visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_mapview_visible"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_edit_mapview_gl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                >
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_enable_mapview_gl"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_edit_mapview_gl_visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:button="@null"
+                    android:background="@drawable/bg_checkbox"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_mapview_gl_visible"
+                    android:gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/gray_C0"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_edit_Snap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dialog_snap_settings"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_edit_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <View
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_edit_settings"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_edit_AddPlotLibrary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                >
+
+                <View
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:visibility="invisible"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_add_plot_library"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_menu_sub_edit_RemovePlotLibrary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_state_white_blue"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="@dimen/check_box_size_edit_submenu_size"
+                    android:layout_height="@dimen/check_box_size_edit_submenu_size"
+                    android:padding="@dimen/check_box_size_edit_submenu_padding"
+                    android:clickable="false"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pop_remove_plot_library"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

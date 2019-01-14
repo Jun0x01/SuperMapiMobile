@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <LinearLayout
+        android:layout_width="@dimen/pop_dialog_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/pop_dialog_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/license_config_title_margin_top"
+            android:gravity="center"
+            android:paddingBottom="@dimen/license_config_title_padding_vertical"
+            android:paddingTop="@dimen/license_config_title_padding_vertical"
+            android:text="@string/license_config_item_text_cloud"
+            android:textColor="@color/license_config_title_color"
+            android:textSize="@dimen/license_config_title_size"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/edit_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/license_config_title_margin_top"
+            android:hint="@string/license_config_cloud_username_hint"
+            android:inputType="textEmailAddress"
+            android:lines="1" />
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/license_config_cloud_password_hint"
+            android:inputType="textPassword"
+            android:lines="1"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_remember_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/license_config_cloud_checkbox_save"
+            />
+        <CheckBox
+            android:id="@+id/checkbox_default_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/license_config_cloud_checkbox_default"
+            />
+
+        <Button
+            android:id="@+id/btn_SignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_state_white_blue_frame_gray_round_corner"
+            android:onClick="onClick"
+            android:textSize="20sp"
+            android:text="@string/license_config_cloud_btn_sign_in"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="website: http://www.supermapol.com"
+            />
+    </LinearLayout>
+
+</FrameLayout>

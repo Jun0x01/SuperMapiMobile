@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="language">Language</string>
+    <string name="chinese">Chinese</string>
+    <string name="english">English</string>
+
+    <string name="legend_view">LegendView</string>
+    <string name="scale_view">ScaleView</string>
+    <string name="rotate_map">Rotate Map</string>
+    <string name="slant_map">Slant Map</string>
+    <string name="dynamic_projection">Dynamic Projection</string>
+
+    <string name="workspace_name_hint">workspace name</string>
+    <string name="title_datasources">Datasources</string>
+    <string name="title_datasets">Datasets</string>
+    <string name="title_map">Map</string>
+
+    <string name="menu_bar_file">File</string>
+    <string name="menu_bar_edit">Edit</string>
+    <string name="menu_bar_navigation">Navigation</string>
+    <string name="menu_bar_tools">Tools</string>
+
+    <string name="add_layers">Add Layers</string>
+    <string name="select_cancel">Cancel</string>
+
+    <string name="measured_length">Length:</string>
+    <string name="measured_length_unit_m">m</string>
+    <string name="measured_length_unit_km">km</string>
+
+    <string name="measured_area">Area:</string>
+    <string name="measured_area_unit_m">m²</string>
+    <string name="measured_area_unit_km">km²</string>
+
+    <string name="measured_angle">Angle:</string>
+    <string name="measured_angle_unit">°</string>
+
+
+    <!-- License Configuration -->
+
+    <string name="license_config_title_text">License Configuration</string>
+
+    <string name="license_config_item_text_local">Local License</string>
+    <string name="license_config_item_text_local_description">Click and select a license path where the valid license file exists.</string>
+    <string name="license_config_item_text_activation">Activate License</string>
+    <string name="license_config_item_text_activation_description">Activate license with valid serial code.</string>
+    <string name="license_config_item_text_cloud">Cloud License</string>
+    <string name="license_config_item_text_cloud_description">Sign in with your SuperMap account and get a temporary license.</string>
+
+    <string name="license_config_local_sub_title_path">License Path:</string>
+    <string name="license_config_activate_sub_title_code">License Code:</string>
+    <string name="license_config_activate_sub_title_type">DeviceID Type:</string>
+    <string name="license_config_activate_sub_title_module">Modules:</string>
+    <string name="license_config_device_id_type_hint">Usually there is no need to change it. A fully restart is need if it was changed.</string>
+
+    <string name="license_config_cloud_username_hint">Username or email address</string>
+    <string name="license_config_cloud_password_hint">Password</string>
+    <string name="license_config_cloud_checkbox_save">Save password</string>
+    <string name="license_config_cloud_checkbox_default">Use default account</string>
+    <string name="license_config_cloud_btn_sign_in">Sign In</string>
+
+</resources>

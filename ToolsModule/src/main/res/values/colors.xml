@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#0000</color>
+    <color name="black">#000</color>
+    <color name="gray">#909090</color>
+    <color name="white">#fff</color>
+
+    <color name="red">#D62111</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="blue">#67e0fa</color>
+    <color name="green">#00FF00</color>
+    <color name="list_item_background">#FFFFFF</color>
+    <color name="list_item_name">#FF000000</color>
+    <color name="list_item_info">#FF909090</color>
+
+    <color name="blue_09F">#09F</color>
+    <color name="blue_0FF">#0FF</color>
+
+
+    <color name="gray_8">#888</color>
+    <color name="gray_9">#999</color>
+    <color name="gray_A">#AAA</color>
+    <color name="gray_B">#BBB</color>
+    <color name="gray_C">#CCC</color>
+    <color name="gray_D">#DDD</color>
+    <color name="gray_C0">#C0C0C0</color>
+
+    <color name="green_6C6">#66CC66</color>
+    <color name="orange_f63">#FF6633</color>
+    <color name="red_c00">#aaCC0000</color>
+</resources>
