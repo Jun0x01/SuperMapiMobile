@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -590,7 +592,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         public static final int RELOADLAYERS = 0x1;
         public static final int TOAST_ERROR = 0x2;
         public static final int TOAST_WARNING = 0x3;
-
+        public static final int DATAOPEN = 0x4;
+        public static final int MAPOPEN = 0x5;
     }
 
     private class MainHandler extends Handler {
@@ -607,6 +610,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
             switch (msg.what) {
                 case MainHandlerTag.RELOADLAYERS:
                     mFragmentLayers.reloadLayers();
+                    mDrawerMapView.openDrawer(findViewById(R.id.fragment_drawer_right_Layers));
+                    mDrawerMapView.closeDrawer(findViewById(R.id.fragment_drawer_left_Workspace));
                     break;
 
                 case MainHandlerTag.TOAST_ERROR: {
@@ -623,6 +628,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     ShowMessage.showInfo(tag, content, MainActivity.this);
                 }
                 break;
+                case MainHandlerTag.DATAOPEN:
+                    mDrawerMapView.openDrawer(findViewById(R.id.fragment_drawer_left_Workspace));
+                    mDrawerMapView.closeDrawer(findViewById(R.id.fragment_drawer_right_Layers));
+                    break;
+                case MainHandlerTag.MAPOPEN:
+                    mDrawerMapView.openDrawer(findViewById(R.id.fragment_drawer_right_Layers));
+                    break;
                 default:
                     break;
 
@@ -679,6 +691,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                     mListOpenedFile.add(path);
 
+                    Message msg = new Message();
+                    msg.what = MainHandlerTag.DATAOPEN;
+                    mHandler.sendMessage(msg);
+
                     ShowMessage.showInfo(tag, getString(R.string.create_workspace_success));
                 } else {
                     ShowMessage.showInfo(tag, getString(R.string.create_workspace_fail));
@@ -710,6 +726,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         mPopDialog.dismiss();
 
                     mListOpenedFile.add(path);
+
+                    Message msg = new Message();
+                    msg.what = MainHandlerTag.DATAOPEN;
+                    mHandler.sendMessage(msg);
 
                     ShowMessage.showInfo(tag, getString(R.string.create_datasource_success));
                 } else {
@@ -748,6 +768,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                     mListOpenedFile.add(path);
 
+                    Message msg = new Message();
+                    msg.what = MainHandlerTag.DATAOPEN;
+                    mHandler.sendMessage(msg);
+
                     ShowMessage.showInfo(tag, getString(R.string.open_workspace_success));
                 } else {
                     ShowMessage.showError(tag, getString(R.string.open_workspace_fail));
@@ -783,7 +807,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             datasetImage.close();
                             boolean isTrue = datasetImage.buildPyramid();
 
-                            Log.e("Data", "Build Pyramid: " + isTrue);
+                            ShowMessage.showError("Main", "Build Pyramid: " + isTrue);
                         }
                     }
                     if (mUpdateFragmentWorkspaceListener != null)
@@ -792,6 +816,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         mPopDialog.dismiss();
 
                     mListOpenedFile.add(path);
+
+                    Message msg = new Message();
+                    msg.what = MainHandlerTag.DATAOPEN;
+                    mHandler.sendMessage(msg);
+
                     ShowMessage.showInfo(tag, getString(R.string.open_datasource_success));
                 } else {
                     ShowMessage.showError(tag, getString(R.string.open_datasource_fail));
@@ -1033,7 +1062,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         }
     }
-
+    CallOut mDynamicLocation;
     private void located(double x, double y) {
         Point2D pos = new Point2D(x, y);
         PrjCoordSys mapPrj = mMap.getPrjCoordSys();
@@ -1051,6 +1080,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         Rectangle2D bounds = mMap.getBounds();
         if (bounds.contains(pos)) {
+            if(mDynamicLocation == null){
+                mDynamicLocation = new CallOut(this);
+                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.location_dot);
+                ImageView imageView = new ImageView(this);
+                imageView.setImageBitmap(bitmap);
+                mDynamicLocation.setCustomize(true);
+                mDynamicLocation.setContentView(imageView);
+            }
+
+            mDynamicLocation.setLocation(pos.getX(), pos.getY());
+            mMapView.removeCallOut("Location");
+            mMapView.addCallout(mDynamicLocation, "Location");
+
             mMapControl.panTo(pos, 500);
         } else {
             ShowMessage.showInfo("Location", getString(R.string.location_outside_map));
